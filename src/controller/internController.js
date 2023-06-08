@@ -50,9 +50,9 @@ const createIntern = async function (req, res) {
         }
         const collegeId = clgId._id
 
-        if (!validator.isValidObjectId(collegeId)) {
-            return res.status(400).send({status: false, message: `${collegeId} is not a valid collegeId`});
-        }
+        // if (!validator.isValidObjectId(collegeId)) {
+        //     return res.status(400).send({status: false, message: `${collegeId} is not a valid collegeId`});
+        // }
 
         const createdata = {name, mobile, email, collegeId}
         const createIntern = await internModel.create(createdata)
