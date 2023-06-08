@@ -27,6 +27,7 @@ const createIntern = async function (req, res) {
         if (!validator.isValid(email) || !validator.isValidEmail(email)) {
             return res.status(400).send({ status: false, message: "Enter a valid email" });
         }
+
         const isEmail = await internModel.findOne({ email: email });
         if (isEmail) {
             return res.status(400).send({ status: false, message: "Email address is already registered" });
@@ -36,6 +37,7 @@ const createIntern = async function (req, res) {
         if (!mobile) {
             return res.status(400).send({ status: false, message: "mobileNumber is required" })
         }
+        
         if (!validator.isValid(mobile) || !validator.isValidMobileNum(mobile)) {
             return res.status(400).send({ status: false, message: "enter valid mobileNumber" })
         }
