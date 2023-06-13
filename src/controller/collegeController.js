@@ -37,7 +37,7 @@ const createCollege = async function (req, res) {
         }
 
         const createClg = await collegeModel.create(clgData)
-        const {_id, __v, ...createClgData} =createClg._doc
+        const {_id, __v, ...createClgData} = createClg._doc
 
         return res.status(201).send({status : true, data : createClgData})
     }catch(error){
@@ -80,3 +80,4 @@ const getCollege = async function (req, res) {
 
 
 module.exports = { createCollege, getCollege }
+

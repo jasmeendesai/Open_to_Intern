@@ -7,7 +7,7 @@ const validator = require('../util/validator')
 const createIntern = async function (req, res) {
     try {
         const intern = req.body; 
-        const { name, mobile, email, collegeName} = intern
+        const {name, mobile, email, collegeName} = intern
 
         //validations
         if(!validator.isValidRequestBody(intern)){

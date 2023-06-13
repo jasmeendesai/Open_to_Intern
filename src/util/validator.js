@@ -23,4 +23,4 @@ const isValid = function (value) {
   };
   
 
-module.exports = {isValid, isValidRequestBody, isValidEmail,isValidObjectId ,isValidMobileNum}
+module.exports = {isValid, isValidRequestBody, isValidEmail,isValidMobileNum}
